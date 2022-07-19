@@ -1,0 +1,12 @@
+@import url("./sanitize.scss");
+@import url("./components/SomeComponent/style.scss");
+
+html,
+body {
+  font-family: "Helvetica";
+}
+
+button,
+a {
+  cursor: pointer;
+}

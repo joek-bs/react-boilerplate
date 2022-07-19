@@ -1,0 +1,13 @@
+{
+  "presets": [
+    "@babel/env",
+    "@babel/typescript",
+    "@babel/react"
+  ],
+  "env": {
+    "test": {
+      "plugins": ["styled-jsx/babel-test"]
+    }
+  },
+  "plugins": ["styled-jsx/babel"]
+}
