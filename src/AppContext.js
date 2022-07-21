@@ -18,7 +18,6 @@ export function AppContextProvider({ children }) {
   // STATE HANDLERS
   function loadedStateHandler(value) {
     setLoaded(value)
-    console.log("ctx triggered")
   }
 
   // WRAPPER SETUP

@@ -1,6 +1,7 @@
 import React, {
   ReactElement,
   useCallback,
+  useEffect,
   useLayoutEffect,
   useState,
 } from "react"
@@ -16,18 +17,16 @@ type Props = {
 }
 
 function SomeComponent({ title, buttonHandler }: Props): ReactElement {
-  // const [textVisible, setTextVisible] = useState(false)
   const ctx = useAppContext()
   const ctxUpdate = useAppContextUpdate()
-
   return (
     <div className="SomeComponent">
       <h2>{title}</h2>
       <p>Some text</p>
 
-      <section onClick={() => ctxUpdate.loadedStateHandler(!ctx.loaded)}>
+      <button onClick={() => ctxUpdate.loadedStateHandler(true)}>
         Button Click
-      </section>
+      </button>
 
       {ctx.loaded === true ? <p>Hallo Peter</p> : null}
     </div>

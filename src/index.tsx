@@ -5,9 +5,9 @@ import "./style.scss"
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Suspense fallback={false}> */}
-    <App />
-    {/* </Suspense> */}
+    <Suspense fallback={false}>
+      <App />
+    </Suspense>
   </React.StrictMode>,
   document.getElementById("root")
 )

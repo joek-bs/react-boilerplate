@@ -11,13 +11,11 @@ function App(): ReactElement {
 
   return (
     <AppContextProvider>
-      <>
-        <Header />
-        <SomeComponent
-          title="This is some component"
-          buttonHandler={buttonHandler}
-        />
-      </>
+      <Header />
+      <SomeComponent
+        title="This is some component"
+        buttonHandler={buttonHandler}
+      />
     </AppContextProvider>
   )
 }
