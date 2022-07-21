@@ -24,7 +24,7 @@ function SomeComponent({ title, buttonHandler }: Props): ReactElement {
       <h2>{title}</h2>
       <p>Some text</p>
 
-      <button onClick={() => ctxUpdate.loadedStateHandler(true)}>
+      <button onClick={() => ctxUpdate.loadedStateHandler(!ctx.loaded)}>
         Button Click
       </button>
 
