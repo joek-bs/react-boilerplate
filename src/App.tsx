@@ -4,18 +4,10 @@ import SomeComponent from "./components/SomeComponent"
 import { AppContextProvider } from "./AppContext"
 
 function App(): ReactElement {
-  const buttonHandler = () => {
-    console.log("log")
-    alert("Hi")
-  }
-
   return (
     <AppContextProvider>
       <Header />
-      <SomeComponent
-        title="This is some component"
-        buttonHandler={buttonHandler}
-      />
+      <SomeComponent title="This is some component" />
     </AppContextProvider>
   )
 }

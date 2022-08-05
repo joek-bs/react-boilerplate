@@ -1,24 +1,13 @@
-import React, {
-  ReactElement,
-  useCallback,
-  useEffect,
-  useLayoutEffect,
-  useState,
-} from "react"
-import {
-  AppContextUpdate,
-  useAppContext,
-  useAppContextUpdate,
-} from "../../AppContext"
+import React, { ReactElement } from "react"
+import { useAppValuesContext, useAppUpdateContext } from "../../AppContext"
 
 type Props = {
   title: string
-  buttonHandler?: () => void
 }
 
-function SomeComponent({ title, buttonHandler }: Props): ReactElement {
-  const ctx = useAppContext()
-  const ctxUpdate = useAppContextUpdate()
+function SomeComponent({ title }: Props): ReactElement {
+  const ctx = useAppValuesContext()
+  const ctxUpdate = useAppUpdateContext()
   return (
     <div className="SomeComponent">
       <h2>{title}</h2>
